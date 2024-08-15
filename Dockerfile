@@ -1,9 +1,11 @@
 FROM alpine:3
 
+# Login 1
 ENV USERNAME=none
 ENV PASSWORD=none
 ENV OPT_ARGS=
 
+# Login 2
 ENV USERNAME2=none
 ENV PASSWORD2=none
 ENV OPT_ARGS2=
