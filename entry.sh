@@ -14,7 +14,7 @@ do
 
 	if [ $USERNAME2 = "none" ]
 	then
- 		echo "2nd login information not found"
+ 		echo "Second login information not found"
 		# Just move the raw file to the output
 		mv /tmp/xmltv/raws/1.xml /data/$XMLTV_FILENAME
 	else
