@@ -1,11 +1,11 @@
 version: '3'
 
 services:
-  zip2xml:
+  zap2xml:
     image: dubmn/zap2xml:latest
-    restart: always
+    container_name: zap2xml
     volumes:
-        - /xmltvdata:/data
+        - /path/to/xmltvdata:/data #Map from local path
     environment:
         - USERNAME=myemail@email.com
         - PASSWORD=**password**
@@ -13,4 +13,5 @@ services:
         - USERNAME2=myemail2@email.com #Optional
         - PASSWORD2=**secondpassword** #Optional
         - OPT_ARGS2=-I -D #Optional
-        - XMLTV_FILENAME=zip2xml.xml
+        - XMLTV_FILENAME=zip2xmltv.xml #Optional
+    restart: always
