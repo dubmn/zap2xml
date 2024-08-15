@@ -23,6 +23,7 @@ RUN apk add --no-cache \
   perl-json-xs \
   perl-lwp-protocol-https \
   perl-gd
+RUN apk add --no-cache xmltv
 
 VOLUME /data
 ADD zap2xml.pl /zap2xml.pl
