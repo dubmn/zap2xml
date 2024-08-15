@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  sports:
-    image: shuaiscott/zap2xml:latest
+  zip2xml:
+    image: dubmn/zap2xml:latest
     restart: always
     volumes:
         - /xmltvdata:/data
@@ -10,4 +10,7 @@ services:
         - USERNAME=myemail@email.com
         - PASSWORD=**password**
         - OPT_ARGS=-I -D
-        - XMLTV_FILENAME=sports.xml
+        - USERNAME2=myemail2@email.com #Optional
+        - PASSWORD2=**secondpassword** #Optional
+        - OPT_ARGS2=-I -D #Optional
+        - XMLTV_FILENAME=zip2xml.xml
