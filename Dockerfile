@@ -1,4 +1,4 @@
-FROM alpine:3
+FROM alpine:3.13.5
 
 # Login 1
 ENV USERNAME=none
@@ -15,13 +15,14 @@ ENV XMLTV_FILENAME=xmltv.xml
 # Wait 12 Hours after run
 ENV SLEEPTIME=43200
 
-RUN echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
-RUN apk add --no-cache perl@edge perl-html-parser@edge perl-http-cookies@edge \
-                       perl-lwp-useragent-determined@edge perl-json@edge perl-json-xs@edge \
-                       perl-lwp-protocol-https@edge perl-uri@edge ca-certificates@edge \
-                       perl-net-libidn@edge perl-net-ssleay@edge perl-io-socket-ssl@edge \
-                       perl-libwww@edge perl-mozilla-ca@edge perl-net-http@edge
-RUN apk add --no-cache xmltv@edge
+RUN apk add --no-cache \
+  perl \
+  perl-http-cookies \
+  perl-lwp-useragent-determined \
+  perl-json \
+  perl-json-xs \
+  perl-lwp-protocol-https \
+  perl-gd
 
 VOLUME /data
 ADD zap2xml.pl /zap2xml.pl
