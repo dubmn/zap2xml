@@ -13,7 +13,7 @@ This is a fork from Scott Carlson [shuaiscott/zap2xml](https://github.com/shuais
 | vX.X.X | Specific zap2xml release |
 
 ### Run
-`docker run -d --name zap2xml --restart always -v /path/to/xmltvdata:/data -e USERNAME=myemail@email.com -e PASSWORD=**password** -e OPT_ARGS="-I -D" -e USERNAME2=myemail2@email.com -e PASSWORD2=**secondpassword** -e OPT_ARGS2="-I -D" -e XMLTV_FILENAME=zap2xmltv.xml dubmn/zap2xml:latest`
+`docker run -d --name zap2xml --restart always -v /path/to/xmltvdata:/data -e USERNAME=myemail@email.com -e PASSWORD=**password** -e OPT_ARGS="-I -D" -e USERNAME2=myemail2@email.com -e PASSWORD2=**secondpassword** -e OPT_ARGS2="-I -D" -e XMLTV_FILENAME=zap2xmltv.xml ghcr.io/dubmn/zap2xml:latest`
 
 ### Compose
 
@@ -21,7 +21,7 @@ This is a fork from Scott Carlson [shuaiscott/zap2xml](https://github.com/shuais
 version: '3'
 services:
   zap2xml:
-    image: dubmn/zap2xml:latest
+    image: ghcr.io/dubmn/zap2xml:latest
     container_name: zap2xml
     volumes:
         - /path/to/xmltvdata:/data #Map from local path
