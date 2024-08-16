@@ -2,7 +2,7 @@ version: '3'
 
 services:
   zap2xml:
-    image: dubmn/zap2xml:latest
+    image: ghcr.io/dubmn/zap2xml:latest
     container_name: zap2xml
     volumes:
         - /path/to/xmltvdata:/data #Map from local path
