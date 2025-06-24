@@ -30,9 +30,9 @@ services:
         - PASSWORD=**password**
         - OPT_ARGS=-I -D
         - USERNAME2=myemail2@email.com #Optional
-        - PASSWORD2=**secondpassword** #Optional
+        - PASSWORD2=**password2** #Optional
         - OPT_ARGS2=-I -D #Optional
-        - XMLTV_FILENAME=zip2xmltv.xml #Optional
+        - XMLTV_FILENAME=zap2xmltv.xml #Optional
     restart: always
 ```
 
