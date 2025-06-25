@@ -820,6 +820,10 @@ sub loginTVG {
 
 sub loginZAP {
   my $rc = 0;
+  if (!defined($ua)) {
+    $ua->default_headers->push_header('Origin' => 'https://tvlistings.gracenote.com');
+    $ua->default_headers->push_header('Referer' => 'https://tvlistings.gracenote.com/grid-affiliates.html?aid=lat');
+  }
   while ($rc++ < $retries) {
     my $r = &ua_post($urlRoot . 'api/user/login', 
       { 
