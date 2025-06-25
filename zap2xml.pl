@@ -824,7 +824,7 @@ sub loginZAP {
     my $r = &ua_post($urlRoot . 'api/user/login', 
       { 
         emailid => $userEmail, password => $password,
-        usertype => '0', facebookuser =>'false',
+        usertype => '0', facebookuser =>'false', aid => 'lat', languagecode => 'en-us',
       }
     ); 
  
